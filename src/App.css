@@ -1,0 +1,6 @@
+.sd-app-empty-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+

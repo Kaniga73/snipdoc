@@ -1,0 +1,24 @@
+.sd-empty {
+  border-radius: var(--sd-radius-lg);
+  border: 1.5px dashed rgba(148, 163, 184, 0.7);
+  padding: 20px 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(148, 163, 184, 0.08),
+    rgba(226, 232, 240, 0.2)
+  );
+  text-align: center;
+}
+
+.sd-empty__title {
+  margin: 0 0 4px;
+  font-size: 1.1rem;
+}
+
+.sd-empty__body {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--sd-text-muted);
+}
+
+

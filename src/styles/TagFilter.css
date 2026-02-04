@@ -1,0 +1,67 @@
+.sd-tags {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.sd-tags--empty {
+  padding: 6px 0;
+}
+
+.sd-tags__label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--sd-text-muted);
+}
+
+.sd-tags__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.sd-tags__empty-text {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--sd-text-muted);
+}
+
+.sd-tags__badge {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  background: rgba(15, 23, 42, 0.01);
+  color: var(--sd-text-muted);
+  cursor: pointer;
+}
+
+.sd-tags__badge:hover {
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.sd-tags__badge--active {
+  background: rgba(129, 140, 248, 0.14);
+  color: var(--sd-primary-gradient-start);
+  border-color: rgba(129, 140, 248, 0.9);
+}
+
+.sd-tags__clear {
+  align-self: flex-start;
+  margin-top: 2px;
+  border: none;
+  background: transparent;
+  color: var(--sd-text-muted);
+  font-size: 0.78rem;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.sd-tags__clear:hover {
+  color: var(--sd-text);
+}
+
+

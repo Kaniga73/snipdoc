@@ -1,0 +1,156 @@
+.sd-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sd-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sd-form__label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--sd-text);
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.sd-form__label-hint {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--sd-text-muted);
+}
+
+.sd-form__input,
+.sd-form__textarea {
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.9);
+  padding: 7px 9px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--sd-text);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.sd-form__textarea--code {
+  font-family: var(--sd-font-mono);
+  font-size: 0.82rem;
+  background: #020617;
+  color: #e5e7eb;
+  min-height: 260px;
+}
+
+[data-theme='dark'] .sd-form__input,
+[data-theme='dark'] .sd-form__textarea {
+  background: rgba(15, 23, 42, 0.98);
+  border-color: rgba(59, 130, 246, 0.6);
+  color: var(--sd-text);
+}
+
+[data-theme='dark'] .sd-form__textarea--code {
+  background: #02081f;
+}
+
+.sd-form__input:focus,
+.sd-form__textarea:focus {
+  outline: 2px solid rgba(129, 140, 248, 0.9);
+  outline-offset: 1px;
+  border-color: rgba(129, 140, 248, 0.9);
+}
+
+.sd-form__error {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #b91c1c;
+}
+
+.sd-form__fieldset {
+  margin: 4px 0 0;
+  padding: 10px 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(209, 213, 219, 0.9);
+}
+
+[data-theme='dark'] .sd-form__fieldset {
+  border-color: rgba(59, 130, 246, 0.5);
+}
+
+.sd-form__legend {
+  padding: 0 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sd-text-muted);
+}
+
+.sd-form__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.sd-form__footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.sd-form__button {
+  border-radius: var(--sd-radius-pill);
+  border: 1px solid transparent;
+  padding: 7px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    background 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease,
+    transform 100ms ease,
+    box-shadow 140ms ease;
+}
+
+.sd-form__button--primary {
+  background: linear-gradient(
+    120deg,
+    var(--sd-primary-gradient-start),
+    var(--sd-primary-gradient-end)
+  );
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(88, 80, 141, 0.45);
+}
+
+.sd-form__button--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 36px rgba(88, 80, 141, 0.6);
+}
+
+.sd-form__button--primary:active {
+  transform: translateY(0);
+  box-shadow: 0 8px 20px rgba(88, 80, 141, 0.45);
+}
+
+.sd-form__button--ghost {
+  background: transparent;
+  border-color: rgba(148, 163, 184, 0.9);
+  color: var(--sd-text-muted);
+}
+
+.sd-form__button--ghost:hover {
+  background: rgba(148, 163, 184, 0.08);
+  color: var(--sd-text);
+}
+
+@media (min-width: 768px) {
+  .sd-form__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+

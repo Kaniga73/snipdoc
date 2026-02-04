@@ -1,0 +1,104 @@
+:root {
+  --sd-primary-gradient-start: #667eea;
+  --sd-primary-gradient-end: #764ba2;
+  --sd-bg: #f5f7fa;
+  --sd-surface: #ffffff;
+  --sd-border-subtle: rgba(148, 163, 184, 0.35);
+  --sd-text: #2d3748;
+  --sd-text-muted: #6b7280;
+  --sd-accent-soft: rgba(102, 126, 234, 0.08);
+  --sd-radius-lg: 18px;
+  --sd-radius-md: 12px;
+  --sd-radius-pill: 999px;
+  --sd-shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.11);
+  --sd-font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
+    'Segoe UI', sans-serif;
+  --sd-font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
+}
+
+[data-theme='dark'] {
+  --sd-bg: #04092023;
+  --sd-surface: #020617;
+  --sd-border-subtle: rgba(59, 130, 246, 0.6);
+  --sd-text: #e5e7eb;
+  --sd-text-muted: #9ca3af;
+  --sd-accent-soft: rgba(59, 130, 246, 0.15);
+  --sd-shadow-soft: 0 24px 70px rgba(15, 23, 42, 0.9);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--sd-font-sans);
+  color: var(--sd-text);
+  background: radial-gradient(circle at top left, #eef2ff 0, #e0f2fe 18%, #f5f7fa 55%)
+    fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+[data-theme='dark'] body {
+  background: radial-gradient(circle at top left, #02081f 0, #020617 28%, #020617 80%)
+    fixed;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+code,
+pre {
+  font-family: var(--sd-font-mono);
+}
+
+.sd-app-shell {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 32px 16px 40px;
+}
+
+.sd-main {
+  margin-top: 24px;
+}
+
+.sd-main__surface {
+  background: radial-gradient(circle at top left, #eef2ff 0, #e0f2fe 24%, #ffffff 70%);
+  border-radius: 28px;
+  padding: 20px 18px 22px;
+  box-shadow: var(--sd-shadow-soft);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  backdrop-filter: blur(14px);
+}
+
+[data-theme='dark'] .sd-main__surface {
+  background: radial-gradient(circle at top left, #020617 0, #020617 20%, #020617 80%);
+  border-color: rgba(30, 64, 175, 0.8);
+}
+
+@media (min-width: 640px) {
+  .sd-app-shell {
+    padding: 40px 20px 48px;
+  }
+
+  .sd-main__surface {
+    padding: 22px 22px 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sd-app-shell {
+    padding: 48px 24px 56px;
+  }
+
+  .sd-main__surface {
+    padding: 26px 26px 30px;
+  }
+}
+
+
